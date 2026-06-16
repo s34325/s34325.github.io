@@ -1,35 +1,108 @@
+
+```html
 <!DOCTYPE html>
 <html lang="th">
 <head>
 <meta charset="UTF-8">
-<meta viewport="width=device-width, initial-scale=1.0">
-<title>แฟ้มสะสมงานของฉัน  </title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>แฟ้มสะสมงานของฉัน</title>
+
 <style>
-body { font-family: sans-serif; background-color: #E4A0B7; text-align: center;
-padding: 30px; }
-.container { max-width: 800px; margin: 0 auto; }
-.project-card { background: white; padding: 20px; margin: 20px 0; border-radius:
-8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); text-align: left; }
-.btn { display: inline-block; background: #2c3e50; color: white; padding: 10px
-20px; text-decoration: none; border-radius: 5px; margin-top: 20px; }
+body {
+    font-family: sans-serif;
+    background-color: #E4A0B7;
+    text-align: center;
+    padding: 30px;
+    margin: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.profile {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    margin: 20px 0;
+}
+
+.project-card {
+    background: white;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: left;
+}
+
+.btn {
+    display: inline-block;
+    background: #2c3e50;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.btn:hover {
+    background: #34495e;
+}
 </style>
+
 </head>
 <body>
+
 <div class="container">
-<h1> แฟ้มสะสมงาน  (Portfolio)</h1>
-<p>นี่คือพื้นที่รวบรวมผลงานและกิจกรรมที่ภูมิใจค่ะ</p>
-<!-- กล่องผลงานชนที่ ้ิ 1 -->
-<div class="project-card">
-<h3>1. โครงงาน/ผลงานวิทยาศาสตร์คำนวณ  </h3>
-<p>รายละเอียดผลงาน  : เขียนอธิบายสั้นๆ ว่าทำอะไร ได้เรียนรู้อะไรจากงานนี้บ้าง  </p>
+
+    <h1>แฟ้มสะสมงาน (Portfolio)</h1>
+
+    <!-- รูปโปรไฟล์ -->
+    <img src="profile.jpg" alt="รูปโปรไฟล์" class="profile">
+
+    <h2>ปรีดาพร แย้มคุ้ม</h2>
+
+    <p>นี่คือพื้นที่รวบรวมผลงาน กิจกรรม และความภาคภูมิใจในการเรียนรู้ของฉัน</p>
+
+    <!-- กล่องผลงานชิ้นที่ 1 -->
+    <div class="project-card">
+        <h3>1. โครงงาน/ผลงานวิทยาศาสตร์คำนวณ</h3>
+        <p>
+            รายละเอียดผลงาน : เขียนอธิบายสั้น ๆ ว่าทำอะไร
+            ใช้ทักษะอะไร และได้เรียนรู้อะไรจากการทำโครงงานนี้
+        </p>
+    </div>
+
+    <!-- กล่องผลงานชิ้นที่ 2 -->
+    <div class="project-card">
+        <h3>2. กิจกรรม/เกียรติบัตรที่ได้รับ</h3>
+        <p>
+            รายละเอียดผลงาน : เข้าร่วมกิจกรรมของโรงเรียน
+            การแข่งขัน การอบรม หรือได้รับเกียรติบัตรต่าง ๆ
+        </p>
+    </div>
+
+    <!-- กล่องผลงานชิ้นที่ 3 -->
+    <div class="project-card">
+        <h3>3. ทักษะและความสามารถ</h3>
+        <p>
+            - Microsoft Word<br>
+            - Microsoft PowerPoint<br>
+            - Canva<br>
+            - การเขียนโปรแกรมเบื้องต้น HTML
+        </p>
+    </div>
+
+    <!-- ปุ่มกลับหน้าแรก -->
+    <a href="index.html" class="btn">กลับหน้าแรก</a>
+
 </div>
-<!-- กล่องผลงานชนที่ ้ิ 2 -->
-<div class="project-card">
-<h3>2. กิจกรรม/เกียรติบัตรที่ได้รับ</h3>
-<p>รายละเอียดผลงาน : เข้าร่วมการประกวด หรือกิจกรรมของโรงเรียน...</p>
-</div>
-<!-- ปุ่มกดกลับหน้าแรก -->
-<a href="index.html" class="btn"> กลับหน้าแรก</a>
-</div>
+
 </body>
 </html>
+```
