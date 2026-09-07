@@ -80,7 +80,7 @@ h1 {
     transform: scale(1.05) rotate(3deg);
 }
 
-/* การ์ดผลงานที่คลิกได้ */
+/* การ์ดผลงานและข้อมูล */
 .project-card {
     background: #FFFFFF;
     padding: 25px;
@@ -94,14 +94,29 @@ h1 {
     display: block;
     text-decoration: none;
     color: inherit;
+}
+
+/* การ์ดที่กดคลิกเชื่อมโยงได้ */
+.clickable {
     cursor: pointer;
 }
 
-/* เอฟเฟกต์เมื่อวางเมาส์บนการ์ด */
-.project-card:hover {
+.clickable:hover {
     transform: translateY(-6px);
     box-shadow: 0 15px 30px rgba(255, 112, 166, 0.2);
     border-color: #FFB3C6;
+}
+
+.clickable h3::after {
+    content: "➔";
+    font-size: 1rem;
+    color: #FFB3C6;
+    transition: transform 0.3s ease;
+}
+
+.clickable:hover h3::after {
+    transform: translateX(6px);
+    color: #FF70A6;
 }
 
 .project-card h3 {
@@ -112,18 +127,6 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
-
-.project-card h3::after {
-    content: "➔";
-    font-size: 1rem;
-    color: #FFB3C6;
-    transition: transform 0.3s ease;
-}
-
-.project-card:hover h3::after {
-    transform: translateX(6px);
-    color: #FF70A6;
 }
 
 .project-card p {
@@ -188,30 +191,31 @@ h1 {
     <div class="name">ปรีดาพร แย้มคุ้ม</div>
     <p class="subtitle">ยินดีต้อนรับสู่พื้นที่รวบรวมผลงาน กิจกรรม และความภาคภูมิใจของฉัน 💕</p>
 
-    <!-- กล่องผลงานชิ้นที่ 1 (ใส่ลิงก์ใน href="...") -->
-    <a href="project1.html" class="project-card">
-        <h3>🧪 1. โครงงาน/ผลงานวิทยาศาสตร์คำนวณ</h3>
+    <!-- กล่องที่ 1: อธิบายเกี่ยวกับตัวเอง -->
+    <div class="project-card">
+        <h3>🌷 1. เกี่ยวกับตัวฉัน (About Me)</h3>
         <p>
-            รวบรวมผลงานการทดลอง การคิดคำนวณ และโครงงานวิทยาศาสตร์ที่ได้ลงมือทำ คลิกเพื่อเข้าชมรายละเอียดและรูปภาพกิจกรรมเพิ่มเติม
+            สวัสดีค่ะ! ฉันชื่อ ปรีดาพร แย้มคุ้ม มีความสนใจและมุ่งมั่นในการเรียนรู้ด้าน <strong>Computer Science & Engineering</strong> ชอบศึกษาระบบการเขียนโปรแกรม การพัฒนาเว็บไซต์ และการสร้างสรรค์นวัตกรรมดิจิทัลใหม่ๆ รวมถึงมีความตั้งใจที่จะพัฒนาทักษะตนเองอยู่เสมอค่ะ ✨
         </p>
-    </a>
+    </div>
 
-    <!-- กล่องผลงานชิ้นที่ 2 (ใส่ลิงก์ใน href="...") -->
-    <a href="activities.html" class="project-card">
+    <!-- กล่องที่ 2: กิจกรรมและเกียรติบัตร (กดคลิกไปดูต่อได้) -->
+    <a href="activities.html" class="project-card clickable">
         <h3>🏆 2. กิจกรรมและเกียรติบัตร</h3>
         <p>
-            สรุปภาพการเข้าร่วมกิจกรรมของโรงเรียน การแข่งขัน การอบรมเชิงปฏิบัติการ และเกียรติบัตรแห่งความภาคภูมิใจที่ได้รับ
+            สรุปภาพการเข้าร่วมกิจกรรมของโรงเรียน การแข่งขัน การอบรมเชิงปฏิบัติการ และเกียรติบัตรแห่งความภาคภูมิใจที่ได้รับ คลิกเพื่อเข้าชมรูปภาพและรายละเอียดเพิ่มเติม
         </p>
     </a>
 
-    <!-- กล่องผลงานชิ้นที่ 3 -->
-    <div class="project-card" style="cursor: default;">
-        <h3 style="pointer-events: none;">💻 3. ทักษะและความสามารถ</h3>
+    <!-- กล่องที่ 3: ทักษะและความสามารถ -->
+    <div class="project-card">
+        <h3>💻 3. ทักษะและความสามารถ</h3>
         <div class="skills-list">
             <span class="skill-badge">Microsoft Word</span>
             <span class="skill-badge">Microsoft PowerPoint</span>
             <span class="skill-badge">Canva Design</span>
             <span class="skill-badge">HTML / CSS</span>
+            <span class="skill-badge">Python</span>
         </div>
     </div>
 
@@ -222,4 +226,3 @@ h1 {
 
 </body>
 </html>
-
