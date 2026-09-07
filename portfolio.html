@@ -1,57 +1,173 @@
-
-```html
 <!DOCTYPE html>
 <html lang="th">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>แฟ้มสะสมงานของฉัน</title>
+<title>แฟ้มสะสมงานของฉัน ✨</title>
+
+<!-- นำเข้าฟอนต์น่ารัก Mali จาก Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mali:wght@400;600;700&display=swap" rel="stylesheet">
 
 <style>
+* {
+    box-sizing: border-box;
+}
+
 body {
-    font-family: sans-serif;
-    background-color: #E4A0B7;
+    font-family: 'Mali', cursive, sans-serif;
+    background: linear-gradient(135deg, #FFE5EC 0%, #FFC2D1 100%);
+    color: #5A4B41;
     text-align: center;
-    padding: 30px;
+    padding: 40px 20px;
     margin: 0;
+    min-height: 100vh;
 }
 
 .container {
-    max-width: 800px;
+    max-width: 750px;
     margin: 0 auto;
 }
 
+/* ส่วนหัวข้อหลัก */
+.title-header {
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 15px 25px;
+    border-radius: 25px;
+    display: inline-block;
+    backdrop-filter: blur(5px);
+    margin-bottom: 10px;
+}
+
+h1 {
+    margin: 0;
+    color: #FF70A6;
+    font-size: 2rem;
+    text-shadow: 1px 1px 0px #fff;
+}
+
+.name {
+    color: #6B4C3B;
+    font-size: 1.6rem;
+    margin: 15px 0 5px 0;
+    font-weight: 700;
+}
+
+.subtitle {
+    color: #8C7A6B;
+    font-size: 1rem;
+    margin-bottom: 30px;
+}
+
+/* กรอบรูปโปรไฟล์น่ารักๆ */
+.profile-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
 .profile {
-    width: 180px;
-    height: 180px;
+    width: 170px;
+    height: 170px;
     border-radius: 50%;
     object-fit: cover;
-    border: 5px solid white;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-    margin: 20px 0;
+    border: 6px solid #FFFFFF;
+    box-shadow: 0 8px 20px rgba(255, 112, 166, 0.3);
+    transition: transform 0.3s ease;
 }
 
+.profile:hover {
+    transform: scale(1.05) rotate(3deg);
+}
+
+/* การ์ดผลงานที่คลิกได้ */
 .project-card {
-    background: white;
-    padding: 20px;
+    background: #FFFFFF;
+    padding: 25px;
     margin: 20px 0;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    border: 2px solid #FFF0F5;
     text-align: left;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    position: relative;
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
 }
 
+/* เอฟเฟกต์เมื่อวางเมาส์บนการ์ด */
+.project-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 30px rgba(255, 112, 166, 0.2);
+    border-color: #FFB3C6;
+}
+
+.project-card h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #FF70A6;
+    font-size: 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.project-card h3::after {
+    content: "➔";
+    font-size: 1rem;
+    color: #FFB3C6;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover h3::after {
+    transform: translateX(6px);
+    color: #FF70A6;
+}
+
+.project-card p {
+    margin: 0;
+    line-height: 1.7;
+    color: #6C5C53;
+    font-size: 0.95rem;
+}
+
+/* ส่วนแท็กทักษะ */
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.skill-badge {
+    background-color: #FFE5EC;
+    color: #FF477E;
+    padding: 6px 14px;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+/* ปุ่มกดน่ารักๆ */
 .btn {
     display: inline-block;
-    background: #2c3e50;
+    background: #FF70A6;
     color: white;
-    padding: 10px 20px;
+    padding: 12px 30px;
     text-decoration: none;
-    border-radius: 5px;
-    margin-top: 20px;
+    border-radius: 25px;
+    margin-top: 25px;
+    font-weight: 600;
+    box-shadow: 0 5px 15px rgba(255, 112, 166, 0.4);
+    transition: all 0.3s ease;
 }
 
 .btn:hover {
-    background: #34495e;
+    background: #FF477E;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(255, 71, 126, 0.4);
 }
 </style>
 
@@ -60,49 +176,50 @@ body {
 
 <div class="container">
 
-    <h1>แฟ้มสะสมงาน (Portfolio)</h1>
+    <div class="title-header">
+        <h1>✨ แฟ้มสะสมงาน (Portfolio) ✨</h1>
+    </div>
 
     <!-- รูปโปรไฟล์ -->
-    <img src="Screenshot 2026-06-16 113105.jpg" alt="รูปโปรไฟล์" class="profile">
-
-    <h2>ปรีดาพร แย้มคุ้ม</h2>
-
-    <p>นี่คือพื้นที่รวบรวมผลงาน กิจกรรม และความภาคภูมิใจในการเรียนรู้ของฉัน</p>
-
-    <!-- กล่องผลงานชิ้นที่ 1 -->
-    <div class="project-card">
-        <h3>1. โครงงาน/ผลงานวิทยาศาสตร์คำนวณ</h3>
-        <p>
-            รายละเอียดผลงาน : เขียนอธิบายสั้น ๆ ว่าทำอะไร
-            ใช้ทักษะอะไร และได้เรียนรู้อะไรจากการทำโครงงานนี้
-        </p>
+    <div>
+        <img src="Screenshot 2026-06-16 113105.jpg" alt="รูปโปรไฟล์" class="profile">
     </div>
 
-    <!-- กล่องผลงานชิ้นที่ 2 -->
-    <div class="project-card">
-        <h3>2. กิจกรรม/เกียรติบัตรที่ได้รับ</h3>
+    <div class="name">ปรีดาพร แย้มคุ้ม</div>
+    <p class="subtitle">ยินดีต้อนรับสู่พื้นที่รวบรวมผลงาน กิจกรรม และความภาคภูมิใจของฉัน 💕</p>
+
+    <!-- กล่องผลงานชิ้นที่ 1 (ใส่ลิงก์ใน href="...") -->
+    <a href="project1.html" class="project-card">
+        <h3>🧪 1. โครงงาน/ผลงานวิทยาศาสตร์คำนวณ</h3>
         <p>
-            รายละเอียดผลงาน : เข้าร่วมกิจกรรมของโรงเรียน
-            การแข่งขัน การอบรม หรือได้รับเกียรติบัตรต่าง ๆ
+            รวบรวมผลงานการทดลอง การคิดคำนวณ และโครงงานวิทยาศาสตร์ที่ได้ลงมือทำ คลิกเพื่อเข้าชมรายละเอียดและรูปภาพกิจกรรมเพิ่มเติม
         </p>
-    </div>
+    </a>
+
+    <!-- กล่องผลงานชิ้นที่ 2 (ใส่ลิงก์ใน href="...") -->
+    <a href="activities.html" class="project-card">
+        <h3>🏆 2. กิจกรรมและเกียรติบัตร</h3>
+        <p>
+            สรุปภาพการเข้าร่วมกิจกรรมของโรงเรียน การแข่งขัน การอบรมเชิงปฏิบัติการ และเกียรติบัตรแห่งความภาคภูมิใจที่ได้รับ
+        </p>
+    </a>
 
     <!-- กล่องผลงานชิ้นที่ 3 -->
-    <div class="project-card">
-        <h3>3. ทักษะและความสามารถ</h3>
-        <p>
-            - Microsoft Word<br>
-            - Microsoft PowerPoint<br>
-            - Canva<br>
-            - การเขียนโปรแกรมเบื้องต้น HTML
-        </p>
+    <div class="project-card" style="cursor: default;">
+        <h3 style="pointer-events: none;">💻 3. ทักษะและความสามารถ</h3>
+        <div class="skills-list">
+            <span class="skill-badge">Microsoft Word</span>
+            <span class="skill-badge">Microsoft PowerPoint</span>
+            <span class="skill-badge">Canva Design</span>
+            <span class="skill-badge">HTML / CSS</span>
+        </div>
     </div>
 
     <!-- ปุ่มกลับหน้าแรก -->
-    <a href="index.html" class="btn">กลับหน้าแรก</a>
+    <a href="index.html" class="btn">🏠 กลับหน้าแรก</a>
 
 </div>
 
 </body>
 </html>
-```
+
