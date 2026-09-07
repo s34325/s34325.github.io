@@ -1,32 +1,108 @@
-<!-- นี่คือโครงสร้างหน้าเว็บทังหมด ้ -->
 <!DOCTYPE html>
 <html lang="th">
 <head>
 <meta charset="UTF-8">
-<title>หน้าแนะนำตัวของฉัน</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>หน้าแนะนำตัวของฉัน ✨</title>
+
+<!-- นำเข้าฟอนต์น่ารัก Mali จาก Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mali:wght@400;600;700&display=swap" rel="stylesheet">
+
 <style>
+* {
+    box-sizing: border-box;
+}
+
 body {
-background-color: #C5A6C7; color: #333;
-text-align: center; padding: 50px;
-
+    font-family: 'Mali', cursive, sans-serif;
+    background: linear-gradient(135deg, #FFE5EC 0%, #FFC2D1 100%);
+    color: #5A4B41;
+    text-align: center;
+    padding: 50px 20px;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
 .card {
-background: white; border-radius: 50px;
-box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-max-width: 500px; margin: 0 auto; padding: 30px;
-
+    background: #FFFFFF;
+    border-radius: 35px;
+    box-shadow: 0 10px 25px rgba(255, 112, 166, 0.2);
+    border: 3px solid #FFF0F5;
+    max-width: 520px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 40px 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-h1 { color: #2c3e50; }
-p { font-size: 18px; line-height: 1.6; }
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(255, 112, 166, 0.3);
+}
+
+.icon-welcome {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+h1 {
+    color: #FF70A6;
+    font-size: 1.8rem;
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 0px #FFF;
+}
+
+p {
+    font-size: 17px;
+    line-height: 1.8;
+    color: #6C5C53;
+    margin: 12px 0;
+}
+
+strong {
+    color: #FF477E;
+}
+
+/* ปุ่มกดสไตล์พาสเทลน่ารัก */
+.btn {
+    display: inline-block;
+    background: #FF70A6;
+    color: white;
+    padding: 12px 28px;
+    text-decoration: none;
+    border-radius: 25px;
+    margin-top: 20px;
+    font-weight: 600;
+    font-size: 16px;
+    box-shadow: 0 5px 15px rgba(255, 112, 166, 0.4);
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background: #FF477E;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(255, 71, 126, 0.4);
+}
 </style>
 </head>
 <body>
+
 <div class="card">
-<h1>ยินดีต้อนรับสู่โปรไฟล์ของฉัน </h1>
-<p>สวัสดีจร้า! ฉันชื่อ <strong>ปรีดาพร (Preedaphorn)</strong></p>
-<p>ขณะนี้กำลังศึกษา/สนใจด้าน Computer Science&Enginearing </p>
-<p>นี่คือเว็บไซต์แรกของฉันที่โฮสต์บน GitHub Pages!</p>
-<a href="portfolio.html" class="btn"> แฟ้มสะสมผลงาน</a>
+    <div class="icon-welcome">🌸✨</div>
+    <h1>ยินดีต้อนรับสู่โปรไฟล์ของฉัน</h1>
+    
+    <p>สวัสดีจ้า! ฉันชื่อ <strong>ปรีดาพร (Preedaphorn)</strong> 💕</p>
+    <p>ขณะนี้กำลังศึกษา/สนใจด้าน <strong>Medical Technology & Engineering</strong> 💻</p>
+    <p>นี่คือเว็บไซต์แรกของฉันที่โฮสต์บน GitHub Pages! 🚀</p>
+    
+    <a href="portfolio.html" class="btn">📂 แฟ้มสะสมผลงาน</a>
 </div>
+
 </body>
 </html>
