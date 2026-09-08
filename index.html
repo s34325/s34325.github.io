@@ -212,6 +212,98 @@
     .about-card p { font-size: 16px; line-height: 1.85; color: var(--ink-soft); margin: 10px 0; }
     .about-card strong { color: var(--pink-deep); }
 
+    /* ---------- goal banner ---------- */
+    .goal-banner {
+        max-width: 560px;
+        margin: 22px auto 0;
+        background: linear-gradient(135deg, var(--mint-pale), var(--pink-pale));
+        border: 3px dashed var(--pink);
+        border-radius: 26px;
+        padding: 22px 26px;
+        text-align: center;
+    }
+    .goal-banner .goal-emoji { font-size: 26px; display: block; margin-bottom: 6px; }
+    .goal-banner h3 { margin: 0 0 8px; color: var(--pink-deep); font-size: 17px; }
+    .goal-banner p { margin: 0; font-size: 14.5px; line-height: 1.8; color: var(--ink-soft); }
+    .goal-banner .goal-tags { margin-top: 12px; display: flex; justify-content: center; gap: 6px; flex-wrap: wrap; }
+    .goal-banner .goal-tags span {
+        background: var(--paper);
+        color: #2F8E89;
+        font-size: 11.5px;
+        font-weight: 600;
+        padding: 4px 12px;
+        border-radius: 12px;
+        border: 1px solid var(--mint);
+    }
+
+    /* ---------- education timeline ---------- */
+    .edu-timeline {
+        max-width: 640px;
+        margin: 0 auto;
+        position: relative;
+        padding-left: 30px;
+    }
+    .edu-timeline::before {
+        content: "";
+        position: absolute;
+        left: 9px;
+        top: 6px;
+        bottom: 6px;
+        width: 3px;
+        background: repeating-linear-gradient(to bottom, var(--pink-mid) 0 8px, transparent 8px 14px);
+        border-radius: 3px;
+    }
+    .edu-item {
+        position: relative;
+        background: var(--paper);
+        border: 3px solid var(--pink-pale);
+        border-radius: 22px;
+        padding: 18px 22px;
+        margin-bottom: 20px;
+        box-shadow: 0 8px 18px rgba(139, 149, 219, 0.12);
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+    .edu-item:last-child { margin-bottom: 0; }
+    .edu-item:hover {
+        transform: translateX(4px);
+        box-shadow: 0 12px 22px rgba(139, 149, 219, 0.2);
+    }
+    .edu-item::before {
+        content: "";
+        position: absolute;
+        left: -30px;
+        top: 22px;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: var(--paper);
+        border: 3px solid var(--pink);
+    }
+    .edu-item .edu-level {
+        display: inline-block;
+        background: var(--mint-pale);
+        color: #2F8E89;
+        font-weight: 600;
+        font-size: 12.5px;
+        padding: 3px 12px;
+        border-radius: 12px;
+        margin-bottom: 8px;
+    }
+    .edu-item h4 { margin: 0 0 4px; color: var(--pink-deep); font-size: 16px; }
+    .edu-item p { margin: 0; font-size: 13.5px; color: var(--ink-soft); line-height: 1.6; }
+    .edu-item .edu-gpa {
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        margin-top: 10px;
+        background: var(--pink-pale);
+        color: var(--pink-deep);
+        font-weight: 600;
+        font-size: 13px;
+        padding: 4px 12px;
+        border-radius: 12px;
+    }
+
     /* ---------- skills ---------- */
     .skills-grid {
         display: grid;
@@ -519,6 +611,7 @@
 <div class="blob b4"></div>
 <nav>
     <a href="#about">เกี่ยวกับฉัน</a>
+    <a href="#education">การศึกษา</a>
     <a href="#skills">ทักษะ</a>
     <a href="#projects">ผลงาน</a>
     <a href="#contact">ติดต่อ</a>
@@ -547,6 +640,43 @@
         <p>ขณะนี้กำลังศึกษา/สนใจด้าน <strong>Medical Technology & Engineering</strong> 💻</p>
         <p>ชอบเรียนรู้สิ่งใหม่ ๆ ที่ผสานความรู้ด้านการแพทย์เข้ากับเทคโนโลยี และอยากสร้างสิ่งที่ช่วยเหลือผู้คนได้จริง 🌸</p>
         <p>นี่คือเว็บไซต์แรกของฉันที่โฮสต์บน GitHub Pages! 🚀</p>
+    </div>
+
+    <div class="goal-banner reveal">
+        <span class="goal-emoji">🎯</span>
+        <h3>เป้าหมายการเรียนต่อ</h3>
+        <p>ที่อยากเข้าคณะ<strong style="color:var(--pink-deep)">เทคนิคการแพทย์</strong> เพราะเป็นสาขาที่เกี่ยวกับทั้งวิทยาศาสตร์และการแพทย์ ซึ่งเป็นสิ่งที่ฉันสนใจ โดยเฉพาะการตรวจวิเคราะห์ต่าง ๆ ที่ช่วยให้แพทย์สามารถวินิจฉัยและรักษาผู้ป่วยได้อย่างถูกต้อง ฉันรู้สึกว่างานของนักเทคนิคการแพทย์เป็นงานที่ต้องใช้ความละเอียด รอบคอบ และความรับผิดชอบ ซึ่งเป็นสิ่งที่ฉันอยากพัฒนาตัวเองให้มากขึ้น ฉันจึงอยากเรียนรู้เกี่ยวกับการทำงานในห้องปฏิบัติการและนำความรู้ที่ได้ไปใช้ในอนาคต เป้าหมายของฉันคือการได้ทำงานในสายที่ตัวเองสนใจ และได้เป็นส่วนหนึ่งในการช่วยดูแลสุขภาพของผู้อื่น</p>
+        <div class="goal-tags">
+            <span>Medical Technology</span>
+            <span>Lab Diagnostics</span>
+            <span>Patient Care</span>
+        </div>
+    </div>
+</section>
+
+<section id="education">
+    <h2 class="section-title reveal">ประวัติการศึกษา 🎓</h2>
+    <p class="section-sub reveal">เส้นทางการเรียนของฉัน</p>
+
+    <div class="edu-timeline">
+        <div class="edu-item reveal">
+            <span class="edu-level">🏫 ระดับประถมศึกษา</span>
+            <h4>โรงเรียนสามมิตร</h4>
+            <p>จังหวัดนครสวรรค์</p>
+            <span class="edu-gpa">📊 เกรดเฉลี่ย 3.81</span>
+        </div>
+        <div class="edu-item reveal">
+            <span class="edu-level">📘 ระดับมัธยมศึกษาตอนต้น</span>
+            <h4>โรงเรียนบ้านบึง "อุตสาหกรรมนุเคราะห์"</h4>
+            <p>มัธยมศึกษาตอนต้น (ม.1 - ม.3)</p>
+            <span class="edu-gpa">📊 เกรดเฉลี่ย 3.82</span>
+        </div>
+        <div class="edu-item reveal">
+            <span class="edu-level">📗 ระดับมัธยมศึกษาตอนปลาย</span>
+            <h4>โรงเรียนบ้านบึง "อุตสาหกรรมนุเคราะห์"</h4>
+            <p>มัธยมศึกษาตอนปลาย (ม.4 - ม.6)</p>
+            <span class="edu-gpa">📊 เกรดเฉลี่ย 3.86</span>
+        </div>
     </div>
 </section>
 
@@ -744,7 +874,10 @@
     <div class="contact-card reveal">
         <p>หากสนใจพูดคุย ทำงานร่วมกัน หรืออยากทักทาย ติดต่อมาได้เลยนะคะ 🌸</p>
         <div class="contact-links">
-            <a href="mailto:your-email@example.com" class="btn">📧 อีเมล</a>
+            <a href="mailto:s34325@banbung.ac.th" class="btn">📧 s34325@banbung.ac.th</a>
+            <a href="mailto:yeamkoom@gmail.com" class="btn">📧 yeamkoom@gmail.com</a>
+            <a href="tel:0622410275" class="btn outline">📞 062-241-0275</a>
+            <a href="https://instagram.com/prqxll" target="_blank" rel="noopener" class="btn outline">📸 @prqxll</a>
             <a href="index.html" class="btn outline">🏠 กลับหน้าแรก</a>
         </div>
     </div>
@@ -819,3 +952,4 @@
 
 </body>
 </html>
+
