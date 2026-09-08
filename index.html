@@ -236,6 +236,51 @@
         border: 1px solid var(--mint);
     }
 
+    /* ---------- university choices ---------- */
+    .uni-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+        gap: 22px;
+        max-width: 720px;
+        margin: 0 auto;
+    }
+    .uni-card {
+        background: var(--paper);
+        border: 3px solid var(--pink-pale);
+        border-radius: 26px;
+        padding: 26px 22px;
+        text-align: center;
+        box-shadow: 0 8px 20px rgba(139, 149, 219, 0.12);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .uni-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 16px 28px rgba(139, 149, 219, 0.2);
+    }
+    .uni-logo {
+        width: 84px;
+        height: 84px;
+        object-fit: contain;
+        margin: 0 auto 14px;
+        display: block;
+    }
+    .uni-card h4 { margin: 0 0 6px; color: var(--pink-deep); font-size: 16.5px; }
+    .uni-card .uni-faculty {
+        font-size: 13.5px;
+        color: var(--ink-soft);
+        line-height: 1.7;
+        margin: 0 0 10px;
+    }
+    .uni-card .uni-badge {
+        display: inline-block;
+        background: var(--mint-pale);
+        color: #2F8E89;
+        font-weight: 600;
+        font-size: 12px;
+        padding: 4px 12px;
+        border-radius: 12px;
+    }
+
     /* ---------- education timeline ---------- */
     .edu-timeline {
         max-width: 640px;
@@ -612,6 +657,7 @@
 <nav>
     <a href="#about">เกี่ยวกับฉัน</a>
     <a href="#education">การศึกษา</a>
+    <a href="#universities">มหาวิทยาลัย</a>
     <a href="#skills">ทักษะ</a>
     <a href="#projects">ผลงาน</a>
     <a href="#contact">ติดต่อ</a>
@@ -676,6 +722,26 @@
             <h4>โรงเรียนบ้านบึง "อุตสาหกรรมนุเคราะห์"</h4>
             <p>มัธยมศึกษาตอนปลาย (ม.4 - ม.6)</p>
             <span class="edu-gpa">📊 เกรดเฉลี่ย 3.86</span>
+        </div>
+    </div>
+</section>
+
+<section id="universities">
+    <h2 class="section-title reveal">มหาวิทยาลัยที่สนใจศึกษาต่อ 🏛️</h2>
+    <p class="section-sub reveal">เป้าหมายด้านการศึกษาต่อในระดับอุดมศึกษา</p>
+
+    <div class="uni-grid">
+        <div class="uni-card reveal">
+            <img class="uni-logo" src="mahidol-logo.jpg" alt="มหาวิทยาลัยมหิดล">
+            <h4>มหาวิทยาลัยมหิดล</h4>
+            <p class="uni-faculty">คณะเทคนิคการแพทย์<br>สาขาเทคนิคการแพทย์</p>
+            <span class="uni-badge">🎯 อันดับ 1</span>
+        </div>
+        <div class="uni-card reveal">
+            <img class="uni-logo" src="thammasat-logo.jpg" alt="มหาวิทยาลัยธรรมศาสตร์">
+            <h4>มหาวิทยาลัยธรรมศาสตร์</h4>
+            <p class="uni-faculty">คณะสหเวชศาสตร์<br>สาขาเทคนิคการแพทย์</p>
+            <span class="uni-badge">🎯 อันดับ 2</span>
         </div>
     </div>
 </section>
@@ -952,4 +1018,3 @@
 
 </body>
 </html>
-
