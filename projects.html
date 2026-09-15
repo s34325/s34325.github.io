@@ -9,6 +9,65 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Mali:wght@400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+
+<style>
+  /* --- Activity photo gallery (self-contained, added alongside existing styles) --- */
+  .activity-gallery {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin: 10px 0 26px;
+  }
+  .activity-gallery figure {
+    margin: 0;
+    width: 200px;
+    max-width: 42vw;
+  }
+  .activity-gallery img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 14px;
+    cursor: zoom-in;
+    display: block;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+    transition: transform .2s ease;
+  }
+  .activity-gallery img:hover {
+    transform: scale(1.03);
+  }
+  .activity-gallery figcaption {
+    font-size: 0.8rem;
+    text-align: center;
+    margin-top: 6px;
+    opacity: 0.8;
+  }
+  .act-lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.8);
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+  }
+  .act-lightbox.open { display: flex; }
+  .act-lightbox img {
+    max-width: 92vw;
+    max-height: 88vh;
+    border-radius: 10px;
+  }
+  .act-lightbox-close {
+    position: absolute;
+    top: 18px;
+    right: 26px;
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+    line-height: 1;
+  }
+</style>
 </head>
 <body>
 
@@ -48,6 +107,18 @@
         <div class="cert-group cat-training" data-group="training">
             <h3 class="cert-group-title reveal"><span class="dot"></span> เกียรติบัตรการอบรม</h3>
             <p class="cert-group-note reveal">แสดงว่าเคย <strong>สัมผัสบรรยากาศงานจริงในโรงพยาบาล</strong> ใช้ตอบคำถามสัมภาษณ์และเขียนเหตุผลที่อยากเรียนต่อได้อย่างมีน้ำหนัก</p>
+
+            <div class="activity-gallery reveal">
+                <figure>
+                    <img src="images/hospital-action-1.jpg" alt="ฝึกปฏิบัติงานโรงพยาบาลบ้านบึง - วัดสัดส่วนผู้ป่วย" onclick="openActLightbox(this.src)">
+                    <figcaption>คัดกรอง/วัดสัดส่วนผู้ป่วย ณ โรงพยาบาลบ้านบึง</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/hospital-action-2.jpg" alt="ฝึกปฏิบัติงานโรงพยาบาลบ้านบึง - วัดความดันโลหิต" onclick="openActLightbox(this.src)">
+                    <figcaption>วัดความดันโลหิตผู้ป่วยผู้สูงอายุ</figcaption>
+                </figure>
+            </div>
+
             <div class="projects-grid">
                 <div class="project-card reveal" data-cat="training"
                      data-img="training-1.jpg"
@@ -102,6 +173,18 @@
         <div class="cert-group cat-competition" data-group="competition">
             <h3 class="cert-group-title reveal"><span class="dot"></span> เกียรติบัตรเข้าร่วมการแข่งขัน</h3>
             <p class="cert-group-note reveal">ตรงสายที่สุด — การแข่งขัน<strong>ปฐมพยาบาล</strong>แสดง <strong>พื้นฐานความรู้ด้านสุขภาพ</strong> และประสบการณ์เชิงปฏิบัติต่อเนื่องหลายปี ใช้เขียนใน Portfolio แสดงความสนใจที่มั่นคงในสายการแพทย์</p>
+
+            <div class="activity-gallery reveal">
+                <figure>
+                    <img src="images/firstaid-action-1.jpg" alt="ฝึกซ้อมการเข้าเฝือก การแข่งขันปฐมพยาบาล" onclick="openActLightbox(this.src)">
+                    <figcaption>ฝึกปฏิบัติการเข้าเฝือก ในการแข่งขันปฐมพยาบาล</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/firstaid-action-2.jpg" alt="รับมอบเกียรติบัตรการแข่งขันปฐมพยาบาล" onclick="openActLightbox(this.src)">
+                    <figcaption>รับมอบเกียรติบัตรจากการแข่งขันปฐมพยาบาล</figcaption>
+                </figure>
+            </div>
+
             <div class="projects-grid">
 
                 <!-- รางวัลที่ 1: งานศิลปหัตถกรรมนักเรียน ระดับชาติ ครั้งที่ 70 (เหรียญทองแดง) -->
@@ -198,6 +281,21 @@
         </div>
     </div>
 </div>
+
+<!-- Lightbox for activity photos (separate from the certificate modal above) -->
+<div class="act-lightbox" id="actLightbox" onclick="closeActLightbox()">
+    <span class="act-lightbox-close" onclick="closeActLightbox()">&times;</span>
+    <img id="actLightboxImg" src="" alt="ภาพกิจกรรม">
+</div>
+<script>
+  function openActLightbox(src) {
+    document.getElementById('actLightboxImg').src = src;
+    document.getElementById('actLightbox').classList.add('open');
+  }
+  function closeActLightbox() {
+    document.getElementById('actLightbox').classList.remove('open');
+  }
+</script>
 
 <footer>
     made with 💕 by ปรีดาพร &middot; hosted on GitHub Pages
